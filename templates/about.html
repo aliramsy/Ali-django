@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h>Hello world</h>
+    <p>
+        {{ name }}
+        {{ number }}
+    </p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <ul>
+        {% for sub_item in sales %}
+        <li>{{ forloop.counter }} - {{sub_item }}</li>
+        {% endfor %}
+       
+    </ul>
+{% endblock %}
